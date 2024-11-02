@@ -1,38 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.App h1 {
+  margin-top: 30px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contacts {
+  text-align: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: aqua;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contacts img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.contacts h3 {
+  color: grey;
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contacts p {
+  margin-bottom: 8px;
+}
+
+.contacts .button {
+  padding: 7px;
+  background-color: rgb(0, 255, 0);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background-color: #e3e3e3;
+  border: 3px solid rgb(0, 255, 0);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  display: none;
+  padding: 30px;
+  color: #000;
+  z-index: 333;
+}
+
+.modal img {
+  margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.modal h3 {
+  margin-bottom: 5px;
+}
+
+.modal_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000000;
+  z-index: 222;
+  display: none;
+}
+
+.modal_show {
+  display: block;
 }
